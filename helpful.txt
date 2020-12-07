@@ -5,3 +5,73 @@ To refresh bash so you don not have to relaunch the terminal over & over when ed
 
 I found that the bash-personal file that comes with ArcoLinux is very nice, but can be hard to memorize & a good bit of the shortcuts I have not found I have a need for yet, so I'm creating my own.
 Once I figure out how to add the .bash-personal file into .bashrc I will list those steps here so you can create & add your own as well.
+
+
+https://phoenixnap.com/kb/change-bash-prompt-linux
+
+Back up
+bash
+cp ~/.bashrc ~/.bashrc.bak
+
+Make permanent changes to bash prompt
+sudo nano ~/.bashrc
+
+How to Change BASH Prompt Color
+
+\e[0;32m[\u@\h \W]\$\e[0m
+
+Here’s a breakdown of the commands:
+
+• \e[ – Begin color changes
+• 0;32m – Specify the color code
+• [\u@\h \W]\$ – This is the code for your normal BASH prompt (username@hostname Workingdirectory $)
+• \e[0m – Exit color-change mod
+
+The first number in the color code specifies the typeface:
+
+• 0 – Normal
+• 1 – Bold (bright)
+• 2 – Dim
+• 4 – Underlined
+
+The second number indicates the color you want:
+
+• 30 – Black
+• 31 – Red
+• 32 – Green
+• 33 – Brown
+• 34 – Blue
+• 35 – Purple
+• 36 – Cyan
+• 37 – Light gray
+
+Additionally, if you combine the bright option with a color code, you get a lighter version of that color. For example, if you use color code 1;32, you would get light green instead of the normal green. If you use 1;33, you get yellow instead of brown.
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+
+alias refbsh='source ~/.bashrc'
+alias refals='source ~/.bash_aliases'
+
+alias install='sudo pacman -S'
+alias update='sudo pacman -Syu && yay -Syu'
+
+alias sdn='shutdown now'
+alias sr='reboot'
+
+[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+
+function_name (refresh_bash) {
+  [commands]
+}
+
+function_name () {
+  [commands]
+}
