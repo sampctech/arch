@@ -6,6 +6,8 @@ To refresh bash so you don not have to relaunch the terminal over & over when ed
 I found that the bash-personal file that comes with ArcoLinux is very nice, but can be hard to memorize & a good bit of the shortcuts I have not found I have a need for yet, so I'm creating my own.
 Once I figure out how to add the .bash-personal file into .bashrc I will list those steps here so you can create & add your own as well.
 
+Get info about changing prompt colors
+https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
 
 https://phoenixnap.com/kb/change-bash-prompt-linux
 
