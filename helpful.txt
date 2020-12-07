@@ -1,0 +1,7 @@
+HELPERS
+
+To refresh bash so you don not have to relaunch the terminal over & over when editing some files,
+    source ~/.bashrc
+
+I found that the bash-personal file that comes with ArcoLinux is very nice, but can be hard to memorize & a good bit of the shortcuts I have not found I have a need for yet, so I'm creating my own.
+Once I figure out how to add the .bash-personal file into .bashrc I will list those steps here so you can create & add your own as well.
