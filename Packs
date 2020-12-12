@@ -1,8 +1,25 @@
+To install packages
+pacman -S
+yay -S
+
+to remove packages
+pacman -R
+yay -Rns
+
 List of packages installed
-packman =
+pacstrap /mnt base base-devel linux linux-firmware nano
+
+packman = git wget networkmanager grub efibootmgr bash-completion
+xorg-server xorg-apps xorg-xinit (& dependencies)  xterm
 
 yay =
 
+will need 
+sudo pacman -S lightdm
+sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo systemctl enable lightdm.service
+
+& desktop
 
 
 Themes
