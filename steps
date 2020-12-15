@@ -75,6 +75,7 @@ base
 base-devel
 linux
 linux-firmware
+nano
 
 During install of linux-firmware, got error of missing firmware. these need to be updated after install completes:
 wd719x
@@ -82,7 +83,7 @@ aic94xx
 xhci_pci
 
 the end result is 
-    pacstrap /mnt base base-devel linux linux-firmware
+    pacstrap /mnt base base-devel linux linux-firmware nano
 
 FSTAB
     genfstab -U /mnt >> /mnt/etc/fstab
