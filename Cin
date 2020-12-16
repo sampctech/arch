@@ -1,10 +1,11 @@
-LETS GET GRAPHICAL
+Cinnamon
 
-For this there are many options. Personally I'm a fan of Cinnamon so I'm gonna tackle that first.
+Personally I'm a fan of Cinnamon so I'm gonna tackle that first.
 As I proceed, I will add others as I try them.
 Check the corisponding files with those steps as I go about trying & writing them out.
 
-So that this is done & I have a good starting point to work from, I am going to install xorg then make my copies form this image.
+So that this is done & I have a good starting point to work from, I 
+I am going to install xorg then make my copies form this image.
 For xorg prompts I am going with defaults & installing all options
 I also found that this is a good time to start adding some "essentials"
 To make life a little easier, here I also install nano, git, wget & bash-completion
