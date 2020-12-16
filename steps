@@ -76,14 +76,16 @@ base-devel
 linux
 linux-firmware
 nano
+reflector
+
+the end result is 
+    pacstrap /mnt base base-devel linux linux-firmware nano reflector
 
 During install of linux-firmware, got error of missing firmware. these need to be updated after install completes:
 wd719x
 aic94xx
 xhci_pci
 
-the end result is 
-    pacstrap /mnt base base-devel linux linux-firmware nano
 
 FSTAB
     genfstab -U /mnt >> /mnt/etc/fstab
@@ -91,9 +93,10 @@ FSTAB
 Check that FileSystemTABle is correct
     nano /mnt/etc/fstab
 
-CHROOT
 
+CHange ROOT directory:
     arch-chroot /mnt
+
 
 TIMEZONE
  Edit Region/City accordingly
@@ -104,6 +107,7 @@ Now set hardware clock
 
 to check current time
     date
+
 
 LOCALE
 First we need to set your localization, language
@@ -121,6 +125,7 @@ and add this line to it and save it afterwards
 Shorter alternative
     echo LANG=en_US.UTF-8 > /etc/locale.conf
     echo KEYMAP=be-latin1 > /etc/vconsole.conf
+
 
 HOSTNAME
     nano /etc/hostname
@@ -167,9 +172,13 @@ Now if everything is correct, we need to exit & reboot
     umount -R /mnt
     reboot
 
+
+
 Once reboot completes, log in as root.
 Now you can either shut the system down to make a copy of image or proceed
-I like to tweak a bit befor emaking a copy.
+I found that making a copy before tweaking is useful.
+There are a few things though that are a good idea to have going for the copy that will things a bit easier going forward.
+
 
 First we want to make sur ewe have internet connection
     ping -c1 google.com
@@ -187,7 +196,6 @@ Find [multilib] & remove #
 
 Now we update with
     pacman -Syu
-
 
 Now to add things that we can use, Liek an AUR helper.
 We need to create an average user. You can tweak the groups if needed.
@@ -211,51 +219,12 @@ Now log in as NAME & chk con
 
 & test update
     pacman -Syu
-
-
-LETS GET GRAPHICAL
-
-For this there are many options. Personally I'm a fan of Cinnamon so I'm gonna tackle that first.
-As I proceed, I will add others as I try them.
-Check the corisponding files with those steps as I go about trying & writing them out.
-
-So that this is done & I have a good starting point to work from, I am going to install xorg then make my copies form this image.
-For xorg prompts I am going with defaults & installing all options
-I also found that this is a good time to start adding some "essentials"
-To make life a little easier, here I also install nano, git, wget & bash-completion
-bash-completion completes commands when you press on TAB. This will make life eaier going forward
-    sudo pacman -S xorg-server xorg-apps xorg-xinit xterm nano git wget bash-completion
-
-Here is a good plac to setup our AUR yelpers.
-I'm starting with just yay for now.
-To install yay we need to do the following:
-Clone the yay git repository
-Change the file permissions from the root the sudo user.
-Build the package using the makepkg command
-
-$ cd /opt
-$ sudo git clone https://aur.archlinux.org/yay-git.git
-$ sudo chown -R NAME:users ./yay-git
-$ cd yay-git
-$ makepkg -si
-
-Lastly we need to update yay
-$ yay -Syu
-
-To include development packages during the upgrade:
-$ yay -Syu --devel --timeupdate
-
-See Packs doc for more yay info
-
-For more info & references go to
-https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
-
-
-
-
-
-
+    
     shutdown now
+
+Next we get our enviroment
+
+
 
 Thanks to the groups & individuals that have provided all the info to allow this to be created & updated both up till now & going forwarded
 See Thanks.txt for full list.
