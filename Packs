@@ -9,7 +9,15 @@ yay -Rns
 List of packages installed
 pacstrap /mnt base base-devel linux linux-firmware nano
 
-packman = git wget networkmanager grub efibootmgr bash-completion termite neofetch
+packman =
+git
+wget
+networkmanager
+grub
+efibootmgr
+bash-completion      - bash-completion completes commands when you press on TAB.
+termite
+neofetch
 xorg-server xorg-apps xorg-xinit (& dependencies)  xterm
 
  1) xorg-bdftopcf
