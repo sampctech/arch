@@ -81,17 +81,10 @@ xorg-xmodmap-1.0.10-2 xorg-xpr-1.0.5-2 xorg-xprop-1.2.5-1 xorg-xrandr-1.5.1-2 xo
 xorg-xrefresh-1.0.6-2 xorg-xset-1.2.4-2 xorg-xsetroot-1.1.2-2 xorg-xvinfo-1.1.4-2 xorg-xwd-1.0.7-2
 xorg-xwininfo-1.1.5-2 xorg-xwud-1.0.5-2 xterm-362-1
 
+lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+
 
 yay =
 
-will need 
-sudo pacman -S lightdm
-sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings
-sudo systemctl enable lightdm.service
-
-& desktop
 
 
-Themes
-Cinnamox Rhino
-Numix-Cinnamon-Transparent
