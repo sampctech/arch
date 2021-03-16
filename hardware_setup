@@ -111,12 +111,20 @@ Then logout with
 Login as name
 Next we get our enviroment
 
+sudo pacman -S xorg nvidia
+sudo pacman -S --noconfirm cinnamon termite git wget neofetch bash-completion firefox atom oxygen-icons lightdm lightdm-gtk-greeter lightdm-gtk-greeter-setting
 
+reboot
 
+once logged in,
+add yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
-During install of linux-firmware, got error of missing firmware.
+correct missing missing firmware.
 these need to be updated after install completes:
-
-wd719x
-aic94xx
-xhci_pci
+through yay 
+wd719x-firware
+aix94xx-firmware
+xhci_pci (NA @ this time
