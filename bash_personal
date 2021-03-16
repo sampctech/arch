@@ -1,4 +1,4 @@
-#.bash-personal
+#.bash_personal
 # add your own shortcuts
 
 #ignore upper and lowercase when TAB completion
@@ -10,6 +10,9 @@ alias la='ls -a'
 alias ll='ls -la'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
+
+#Refresh .bashrc after bash updates
+alias rbp='. ~/.bash_personal'
 
 #fix obvious typo's
 alias cd..='cd ..'
@@ -43,14 +46,22 @@ alias wget="wget -c"
 # Aliases for software managment
 # pacman or pm
 alias pacman='sudo pacman --color auto'
-alias update='sudo pacman --noconfirm -Syyu && yay -Syyu'
-alias upda='sudo pacman -Syyu'
+alias upd='sudo pacman -Syyu'
+alias updg='mUSA && upall'
 alias install='sudo pacman -S --noconfirm'
+alias uninstall='sudo pacman -R --noconfirm'
 
 # yay as aur helper - updates everything
 alias pksyua="yay -Syu --noconfirm"
 alias upall="yay -Syu --noconfirm"
-alias yay='yay -S --noconfirm'
+alias yaync='yay -S --noconfirm'
+
+#get fastest mirrors in your neighborhood
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mUSA="sudo reflector -c US -f 20 -l 20 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 
 #add new fonts
 alias update-fc='sudo fc-cache -fv'
@@ -67,12 +78,6 @@ alias trizenskip='trizen -S --skipinteg'
 
 #check vulnerabilities microcode
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
-
-#get fastest mirrors in your neighborhood
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 #mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
@@ -104,8 +109,6 @@ alias nmlst="sudo nano /etc/pacman.d/mirrorlist"
 alias ncgrub="sudo nano /boot/grub/grub.cfg"
 alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
-
-
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
 
@@ -113,10 +116,7 @@ alias probe="sudo -E hw-probe -all -upload"
 alias sdn="sudo shutdown now"
 alias sr="sudo reboot"
 
-#Refresh .bashrc after bash updates
-#alias RB='source .bashrc'
-#alias rb='. ~/.bashrc'
-alias rba='. ~/.bash_personal'
+
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
