@@ -4,15 +4,15 @@
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
+#Refresh .bashrc after bash updates
+alias rbp='. ~/.bash_personal'
+
 #list
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -la'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
-
-#Refresh .bashrc after bash updates
-alias rbp='. ~/.bash_personal'
 
 #fix obvious typo's
 alias cd..='cd ..'
@@ -21,6 +21,12 @@ alias udpate='sudo pacman -Syyu'
 alias upate='sudo pacman -Syyu'
 alias updte='sudo pacman -Syyu'
 alias updqte='sudo pacman -Syyu'
+alias intal='sudo pacman -S'
+alias insal='sudo pacman -S'
+alias instal='sudo pacman -S'
+alias uintal='sudo pacman -S'
+alias uinsal='sudo pacman -S'
+alias uinstal='sudo pacman -S'
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
@@ -49,7 +55,7 @@ alias pacman='sudo pacman --color auto'
 alias upd='sudo pacman -Syyu'
 alias updg='mUSA && upall'
 alias install='sudo pacman -S --noconfirm'
-alias uninstall='sudo pacman -R --noconfirm'
+alias uinstall='sudo pacman -R --noconfirm'
 
 # yay as aur helper - updates everything
 alias pksyua="yay -Syu --noconfirm"
@@ -93,7 +99,6 @@ alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
@@ -115,8 +120,6 @@ alias probe="sudo -E hw-probe -all -upload"
 #shutdown or reboot
 alias sdn="sudo shutdown now"
 alias sr="sudo reboot"
-
-
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
