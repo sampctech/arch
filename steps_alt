@@ -1,8 +1,0 @@
-SO after installing arch a few times with a success rate of 2/3, I tried to figure out what I am possibly doing wrong every third time.
-Following the same steps Via the Arch Wiki, ArcoLinuxD the arch way & watching DT on youtube, I thought I would try a different boot loader because grub is where my error always seems to be.
-
-Browsing the Arch Wiki, I was able to get a nice list of possible choices.
-All have there in & outs, but I thought I would go through them all, cause it's how I learn.
-Looking at the options supported, narrowed to Grub (of course) & Clover.
-
-I started tried Clover.
