@@ -126,5 +126,5 @@ correct missing missing firmware.
 these need to be updated after install completes:
 through yay 
 wd719x-firware
-aix94xx-firmware
+aic94xx-firmware
 xhci_pci (NA @ this time
