@@ -24,4 +24,13 @@ sudo pacman -S qt5
 
 now run sudo ./tv-setup install
 
-3 - 
+3 - remember pactree
+
+pactree will install program & dependencies
+sudo pacman -S $(pactree -l FILENAME)
+
+4 - Samba
+FIRST - remember to add smb.com to /ect/samba/
+SECOND - make sure workgroup is that same as windows, usually WORKGROUP
+
+5 - 
