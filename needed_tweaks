@@ -32,5 +32,16 @@ sudo pacman -S $(pactree -l FILENAME)
 4 - Samba
 FIRST - remember to add smb.com to /ect/samba/
 SECOND - make sure workgroup is that same as windows, usually WORKGROUP
+THIRD - enable & start service
+  sudo systemctl start smb
+  sudo systemctl start nmb
+  sudo systemctl enable smb
+  sudo systemctl enable nmb
+ FORTH - Setup user
+  sudo pdbedit -a -u (username)
 
-5 - 
+5 - AppImage Launcher
+  yay appimage
+  Choose latest appimagelauncher
+ 
+ 6 - 
