@@ -12,4 +12,16 @@ then, after saving, regenerate the initramfs for the change to take effect.
 mkinitcpio -P
 
 
-2 - 
+2 - TeamViewer
+Don't instal via repo, go to Teamviewer.com & download latest tar to start
+
+tar -xf FILENAME
+
+Make sure to have both the latest minizip & qt both installed before proceeding
+
+sudo pacman -S minizip
+sudo pacman -S qt5
+
+now run sudo ./tv-setup install
+
+3 - 
