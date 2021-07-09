@@ -14,11 +14,17 @@ I listed those steps below so you can modify mine or create your own as well.
 # instead of adding them directly to the .bashrc file. This will keep from loosing them
 # after an update that could rewrite the .bashrc file itself
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
 # Uncomment the following to reference
 # for aliases
 # [[ -f ~/.bashrc_aliases ]] && . ~/.bashrc_aliases
 # for personal
 # [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+
+# To reload .bashrc & persoinal aliases file
+#alias rbp='. ~/.bash_aliases'
+#alias rbp='. ~/.bashrc-personal'
+
 
 ###############################################################################################
 
