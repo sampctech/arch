@@ -12,6 +12,13 @@ Here we are going to install the following
 
 This will make life eaier going forward with the display drivers, & helpers to get going.
 
+So its we are ready for whats coming, its a good idea to enable the multilib repo.
+This is done by uncommenting the [multilib] section in /etc/pacman.conf
+sudo nano /etc/pacman.conf
+
+[multilib]
+Include = /etc/pacman.d/mirr
+
 Here is a good place to setup our AUR yelpers.
 I'm starting with just yay for now.
 To install yay we need to do the following:
