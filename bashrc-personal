@@ -35,3 +35,11 @@ alias nano="sudo nano"
 
 #shutdown or reboot
 alias ssd="sudo shutdown now"
+
+#reload bashrc & bashrc-personal
+alias rlbd="sudo exec bash"
+alias rlbc="sudo exec $BASH"
+alias rlb="sudo .~/.bashrc"
+alias rlbp=""sudo .~/.bashrc-personal"
+#alias rlb="sudo source ~/.bashrc"
+#alias rlbp=""sudo source ~/.bashrc-personal"
