@@ -1,0 +1,15 @@
+1 - To have numlock @ startup
+Install mkinitcpio-numlock via AUR and add the numlock mkinitcpio hook in the /etc/mkinitcpio.conf HOOKS array:
+
+/etc/mkinitcpio.conf
+
+...
+HOOKS=(base udev autodetect keyboard keymap consolefont numlock modconf block encrypt lvm2 filesystems fsck)
+...
+
+then, after saving, regenerate the initramfs for the change to take effect.
+
+mkinitcpio -P
+
+
+2 - 
