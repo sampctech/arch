@@ -25,6 +25,12 @@ I listed those steps below so you can modify mine or create your own as well.
 #alias rbp='. ~/.bash_aliases'
 #alias rbp='. ~/.bashrc-personal'
 
+# Backup your .bashrc & persoinal aliases files
+alias bkupbrc="sudo cp ~/.bashrc ~/.bashrc.bak"
+#alias bkupbp="sudo cp ~/.bash_aliases ~/.bash_aliases.bak
+#alias bkupbp="sudo cp ~/.bashrc-personal ~/.bashrc-personal.bak
+#alias bubp="sudo cp ~/.bashrc ~/.bashrc.bak && cp ~/.bash_aliases ~/.bash_aliases.bak
+#alias bubp="sudo cp ~/.bashrc ~/.bashrc.bak && cp ~/.bashrc-personal ~/.bashrc-personal.bak
 
 ###############################################################################################
 
@@ -33,12 +39,10 @@ https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-und
 
 https://phoenixnap.com/kb/change-bash-prompt-linux
 
-Back up
-bash
-cp ~/.bashrc ~/.bashrc.bak
+Back up bash
 
 Make permanent changes to bash prompt
-sudo nano ~/.bashrc
+sudo EDITOR ~/.bashrc
 
 How to Change BASH Prompt Color
 
