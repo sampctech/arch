@@ -3,8 +3,24 @@ HELPERS
 To refresh bash so you don not have to relaunch the terminal over & over when editing some files,
     source ~/.bashrc
 
-I found that the bash-personal file that comes with ArcoLinux is very nice, but can be hard to memorize & a good bit of the shortcuts I have not found I have a need for yet, so I'm creating my own.
-Once I figure out how to add the .bash-personal file into .bashrc I will list those steps here so you can create & add your own as well.
+I found that the bash-personal file that comes with ArcoLinux is very nice.
+I am finding it to be but can be hard to memorize & a good bit of the shortcuts I have not found usefull yet.
+Because of this, so I'm creating my own.
+Once I figured out how to create my own aliases file, I added a reference to the .bashrc file.
+I listed those steps below so you can modify mine or create your own as well.
+
+# Alias definitions.
+# It's a good idea to put all your additions into a separate file like aliases or personal
+# instead of adding them directly to the .bashrc file. This will keep from loosing them
+# after an update that could rewrite the .bashrc file itself
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# Uncomment the following to reference
+# for aliases
+# [[ -f ~/.bashrc_aliases ]] && . ~/.bashrc_aliases
+# for personal
+# [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+
+###############################################################################################
 
 Get info about changing prompt colors
 https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
@@ -48,32 +64,3 @@ The second number indicates the color you want:
 • 37 – Light gray
 
 Additionally, if you combine the bright option with a color code, you get a lighter version of that color. For example, if you use color code 1;32, you would get light green instead of the normal green. If you use 1;33, you get yellow instead of brown.
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-
-alias refbsh='source ~/.bashrc'
-alias refals='source ~/.bash_aliases'
-
-alias install='sudo pacman -S'
-alias update='sudo pacman -Syu && yay -Syu'
-
-alias sdn='shutdown now'
-alias sr='reboot'
-
-[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
-
-function_name (refresh_bash) {
-  [commands]
-}
-
-function_name () {
-  [commands]
-}
